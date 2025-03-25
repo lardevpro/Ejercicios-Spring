@@ -21,6 +21,7 @@ public class UsoEmpleados {
 		//Uso de los objetos creados
 		System.out.println(empleado1.getTareas());
 		
+		System.out.println(empleado1.getInforme());
 		
 		contexto.close();
 	}

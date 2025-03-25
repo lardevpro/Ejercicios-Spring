@@ -1,8 +1,7 @@
 package es.practicas.IoC;
 
-public interface Empleados {
+public interface CreacionInformes {
 
-	public String getTareas();
-	
 	public String getInforme();
+	
 }

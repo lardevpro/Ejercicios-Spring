@@ -9,7 +9,13 @@
            https://www.springframework.org/schema/context/spring-beans-3.1.xsd
            ">
 
+    <!-- Creación de la dependencia -->
+    <bean id="miInforme" class="es.practicas.IoC.Informe"/>
+
     <!-- Definición del bean -->
-    <bean id="miEmpleado" class="es.practica.IoC.DirectorEmpleado"/>
+    <bean id="miEmpleado" class="es.practicas.IoC.JefeEmpleado">
+        <constructor-arg ref="miInforme"></constructor-arg>
+    </bean>
 
 </beans>
+
