@@ -25,11 +25,24 @@ public class UsoEmpleados {
 		
 		
 		
-		Empleados empleado2 = contexto.getBean("miSecretarioEmpleado",Empleados.class);
+		/*Empleados empleado2 = contexto.getBean("miSecretarioEmpleado",Empleados.class);
 		
 		System.out.println(empleado2.getTareas());
 		
-		System.out.println(empleado2.getInforme());
+		System.out.println(empleado2.getInforme()); */
+		
+		
+		
+		SecretarioEmpleado empleado3 = contexto.getBean("miSecretarioEmpleado",SecretarioEmpleado.class);
+		
+		System.out.println(empleado3.getTareas());
+		
+		System.out.println(empleado3.getInforme());
+		
+		System.out.println(empleado3.getEmail());
+		
+		System.out.println(empleado3.getNombreEmpresa());
+		
 		
 		contexto.close();
 	}

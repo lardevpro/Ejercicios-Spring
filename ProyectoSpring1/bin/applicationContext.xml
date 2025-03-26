@@ -23,9 +23,13 @@
 <!-- Definición del bean para creación del objeto que va a ser inyectado mediante set -->
 <bean id="miSecretarioEmpleado" class="es.practicas.IoC.SecretarioEmpleado">
 		<property name="informeNuevo" ref="miInforme"></property> <!-- inyección mediante set con la etiqueta 'property' -->
+		
+		<property name="email" value="secretaria@dependencias.es"></property> <!-- inyeccion de atributo predefinido -->
+		<property name="nombreEmpresa" value="Internacional TI"></property> <!-- inyeccion de atributo predefinido -->
 </bean>
 
-	
+
+
 
 </beans>
 
