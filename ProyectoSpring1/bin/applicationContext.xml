@@ -9,13 +9,23 @@
            https://www.springframework.org/schema/context/spring-beans-3.1.xsd
            ">
 
-    <!-- Creación de la dependencia -->
-    <bean id="miInforme" class="es.practicas.IoC.Informe"/>
+<!-- Creación de la dependencia que será inyectada -->
+<bean id="miInforme" class="es.practicas.IoC.Informe"/>
 
-    <!-- Definición del bean -->
-    <bean id="miEmpleado" class="es.practicas.IoC.JefeEmpleado">
-        <constructor-arg ref="miInforme"></constructor-arg>
-    </bean>
+
+<!-- Definición del bean para creación del objeto que va a ser inyectado mediante constructor  -->
+<bean id="miEmpleado" class="es.practicas.IoC.JefeEmpleado">	
+        <constructor-arg ref="miInforme"></constructor-arg><!-- inyección de dependencia mediante constructor con la etiqueta 'constructor' -->
+</bean>
+
+
+
+<!-- Definición del bean para creación del objeto que va a ser inyectado mediante set -->
+<bean id="miSecretarioEmpleado" class="es.practicas.IoC.SecretarioEmpleado">
+		<property name="informeNuevo" ref="miInforme"></property> <!-- inyección mediante set con la etiqueta 'property' -->
+</bean>
+
+	
 
 </beans>
 
